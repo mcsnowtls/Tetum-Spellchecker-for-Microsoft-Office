@@ -1,0 +1,68 @@
+# Tetum Hunspell Affix File
+# Final version with luzizmu support
+# Encoding
+SET UTF-8
+
+# Alphabet (including accented vowels and glottal stop)
+TRY aábdeéfghiíjklmnñoóprstuúvxyz´
+
+# Flag definitions
+FLAG long
+
+# ------------------------------------------------------------------
+# PLURAL MARKER
+# ------------------------------------------------------------------
+# Native Tetum plural marker: sira
+# NOTE:
+# - Separate word when used with nouns
+# - Hyphen-attached ONLY with pronouns (handled in .dic)
+# - Never allowed for luzizmu (flag L)
+SFX SIRA Y 1
+SFX SIRA 0 sira .
+
+# ------------------------------------------------------------------
+# LUZIZMU FLAG
+# ------------------------------------------------------------------
+# Flag L marks Portuguese loanwords (luzizmu)
+# Restrictions:
+# - No plural inflections
+# - No gender inflections
+# - No verb conjugations
+# - Plurality must be analytic (word + sira)
+#
+# Therefore: NO SFX rules are attached to L
+#
+# Any word marked /L in the .dic is immutable
+
+# ------------------------------------------------------------------
+# NOTES ON GRAMMAR (DOCUMENTATION ONLY)
+# ------------------------------------------------------------------
+# Articles and demonstratives:
+#   ida (indefinite), ne´e (this), ne´ebá (that)
+#   sira-ne´e (these), sira-ne´ebá (those)
+#   Always appear AFTER nouns, never change spelling
+#
+# Verbs:
+#   Native Tetum verbs have ONE form
+#   Portuguese loaned verbs (luzizmu) always in 3rd person singular
+#   Tense particles:
+#     sei  -> future (before verb)
+#     ona  -> past (after verb)
+#     tiha ona -> perfect
+#   Particles NEVER attach to verbs
+#
+# Adjectives:
+#   No gender or number agreement
+#   Always after nouns
+#   Plural order: noun + adjective + sira
+#
+# Possessives:
+#   Written as compounds (handled in .dic)
+#
+# Orthography:
+#   One sound = one letter
+#   See luzizmu orthographic rules documentation
+
+# ------------------------------------------------------------------
+# END OF FILE
+# ------------------------------------------------------------------
